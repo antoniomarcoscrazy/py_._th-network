@@ -1,0 +1,5 @@
+red hat text: 
+font-family: 'Red Hat Text', sans-serif;
+
+red hat display:
+font-family: 'Red Hat Display', sans-serif;

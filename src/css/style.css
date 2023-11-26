@@ -1,0 +1,413 @@
+:root{
+    --wt: #fff;
+    --wb: #ccc;
+    --bc: #150d26;
+    --cc: #88889b;
+    --tc: #44445c;
+    --bcb: #24243c;
+    --bl: #3d1a5e;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    height: 100%;
+    outline: none;
+}
+
+.container{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+header::-webkit-scrollbar {
+    width:5px;       
+}
+  
+header::-webkit-scrollbar-track {
+    background: var(--bc);   
+}
+  
+header::-webkit-scrollbar-thumb {
+    background-color: var(--wt);
+    border-radius: 20px; 
+    border: 1px solid var(--bc);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100vh;
+    background-image: url(../images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header nav{
+    padding: 25px 0;
+    border-bottom: 0.5px solid var(--cc);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    width: 29px;
+}
+
+header .logo img{
+    width: 100%;
+}
+
+header nav p{
+    color: var(--wb);
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 15px;
+    font-weight:400;
+    text-align: end;
+}
+
+header nav p a{
+    color: var(--wt);
+    text-decoration: none;
+}   
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px 0;
+    justify-content: space-between;
+}
+
+section .box{
+    width: 30%;
+    padding: 0 5px;
+}
+
+section .box .topico{
+    font-family: 'Red Hat Text', sans-serif;
+    width: 100%;
+    background-color:var(--bc);
+    cursor: context-menu;
+    font-size: 18px;
+    color: var(--cc);
+    padding: 15px;
+    font-weight: lighter;
+    margin: 1px 0;
+}
+
+section .box .select{
+    background-color:var(--tc);
+    color: var(--wb);
+}
+
+section .box .number{
+    padding:  0 15px;
+}
+section .box2{
+    width: 70%;
+    padding: 0 5px;
+
+}
+
+section .contents{
+    width: 100%;
+}
+
+section .boxcont{
+    width: 100%;
+}
+
+section .boxcont .title{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: var(--bcb);
+    padding: 38px 20px;
+    font-family: 'Red Hat Display', sans-serif;
+    border: 0.5px solid var(--cc);
+}
+
+section .boxcont .title h2{
+    width: 50%;
+    font-size: 30px;
+    font-weight: lighter;
+    color: var(--wb);
+}
+
+section .boxcont .content{
+    padding: 40px;
+    border: 0.5px solid var(--cc);
+    font-family: 'Red Hat Text', sans-serif;
+    color: var(--wb);
+    border-top: none;
+    background-color: var(--bc);
+}
+
+section .boxcont .content p{
+    font-size: 18px;
+    display: flex;
+}
+
+
+section .boxcont .content .topic{
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+section .boxcont .content .topic p{
+    width: 96%;
+}
+
+section .boxcont .content .topic .bullet{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: var(--bl);
+}
+
+section .boxcont .content .topic .line{
+    width: 85%;
+    height: 0.5px;
+    background-color: var(--wb);
+    box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.75);
+
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 40px 0 25px 0; 
+}
+
+.btn button,
+.btn .back button:hover{
+    padding: 15px 30px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: lighter;
+    border: none;
+    background-color: var(--wb);
+    color: #150d26;
+    transition: 0.5s;
+}
+
+.btn button:hover,
+.btn .back button{
+    color: var(--wb);
+    background-color: #150d26;
+    border: 0.5px solid var(--cc);
+    transition: 0.5s;
+}
+
+section .box2 form .selects{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section .box2 form .sel{
+    width: calc(100% / 4);
+    display: flex;
+    margin: 5px 0;
+}
+
+/* Estilizando o checkbox e o label associado */
+.styled-checkbox {
+display: none;
+}
+
+.checkbox-label {
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+user-select: none;
+}
+
+.checkbox-label::before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+width: 20px;
+height: 20px;
+background-color: var(--tc);
+}
+
+.styled-checkbox:checked + .checkbox-label::before {
+background-color: var(--tc);
+border-color: var(--tc);
+}
+
+.styled-checkbox:checked + .checkbox-label::before {
+content: '\2713';
+color: #fff;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+}
+ 
+section .acnt{
+    display: flex;
+    border-bottom: 0.5px solid var(--wb);
+    width: 100%;
+    justify-content: space-between;
+}
+
+section .sect{
+    width: 80%;
+    padding: 5px 20px 5px 40px;
+    display:flex;
+}
+
+section .sect aside{
+    display: flex;
+    align-items: center;
+}
+
+section .sect aside .cancel i{
+    padding: 5px 7px;
+    border-radius: 55px;
+    font-size: 12px;
+    font-weight: lighter;
+    cursor: pointer;
+    background-color: #24243c;
+    border: 0.5px solid var(--wb);
+}
+
+section .sect aside button{
+    width: 200px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: lighter;
+    border: none;
+    padding: 10px;
+    color: var(--wb);
+    align-items:center ;
+    display: flex;
+    justify-content: center;
+    background-color: #150d26;
+    border: 0.5px solid var(--cc);
+    transition: 0.5s;
+}
+
+section .sect aside button i{
+    font-size: 8px;
+    margin: 0 5px;
+}
+
+section .sect aside button:hover{
+    background-color: var(--wb);
+    color: #150d26;
+    transition: 0.5s;
+}
+.cancel{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border-radius: var(--bcb);
+}
+
+section .numbercont{
+    width: 20%;
+    border-left: 0.5px solid var(--wb);
+    display:flex;
+    justify-content: center;
+    align-items:center ;
+    background-color: var(--bcb);
+}
+section .numbercont h2{
+    font-size: 20px;
+}
+section .numbercont img{
+    width: 12px;
+    margin: 0 5px;
+}
+
+footer{
+    width: 100%;
+    margin: 20px 0 60px 0;
+    position: relative;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+footer p{
+    color: var(--wb);
+    font-size: 17px;
+}
+
+@media screen and (max-width: 1000px){
+    section .box{
+        width: 100%;
+    }
+    section .box2{
+        width: 100%;
+        margin:  20px 0;
+    }
+
+    section .box2 form .sel{
+        width: calc(100% / 2);
+    }
+
+    section .sect aside button{
+        width: 120px;
+        font-size: 12px ;
+    }
+    section .numbercont{
+        width: 15%;
+    }
+    section .sect{
+        width: 85%;
+        padding: 5px 20px 5px 20px;
+    }
+
+    section .sect .topic p{
+        font-size: 14px;
+    }
+    
+    section .numbercont h2{
+        font-size: 16px;
+    }
+    section .numbercont img{
+        width: 10px;
+    }
+    .discord{
+        width: 100px !important;
+    }
+    .btn button span{
+        display: none;
+    }
+    .btn button {
+        padding: 10px 15px;
+        margin: 0 4px;
+
+    }
+
+    section .boxcont .title h2 {
+    width: 100%;
+        font-size: 22px;
+    }
+    .btn .back button:hover{
+    padding: 10px 15px;
+}
+}
